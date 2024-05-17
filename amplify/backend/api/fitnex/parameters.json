@@ -1,0 +1,5 @@
+{
+  "AppSyncApiName": "fitnex",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false
+}

@@ -1,0 +1,14 @@
+type User @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  username: String!
+  email: String!
+  calories: [Calorie] @connection(keyName: "byUser", fields: ["id"])
+}
+
+type Calorie @model @key(name: "byUser", fields: ["userId"]) @auth(rules: [{ allow: public }]) {
+  id: ID!
+  userId: ID!
+  description: String!
+  amount: Int!
+  date: AWSDateTime!
+}
